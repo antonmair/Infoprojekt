@@ -1,11 +1,15 @@
 user_input
--input userinput_vector_points 
- input iteration_step
- input iteration_cycles
+-input userinput_vector_points (the user designates 4 points, point1 & point2 describe vector1, point3 & point4 describe vector2)
+ input iteration_step (how many iterated points the program starts at)
+ input iteration_cycles (how many times should more points be added) [stopped if no more improvements can be made!]
+
 -output 
+    iterated_points
+      -input iteration_step + iteration_current_cycle 
+      -output iterated_points 
 
     point_positions_list
-      -input userinput_vector_points & iterated_points
+      -input userinput_vector_points + iterated_points
       -output point_positions_list (list of all current positions)
 
     point_angles_list (unfinished)
