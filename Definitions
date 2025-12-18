@@ -1,9 +1,9 @@
 angle_calc (unfinished)
   -input 
-  -output angle_calc 
+  -output angle_calc (calculate how many angles have what values)
 
 angle_punishment (unfinished)
   -input angle_calc
-  -output angle_punishment (deviation)
+  -output angle_punishment (positive decimal number indicating deviation of set path)
 
 
