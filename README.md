@@ -4,7 +4,7 @@ Erweiterung möglich wo Objekte aus OSM Objekten (z.B. Häuser) bestehen und so 
 
 Einheiten sollten Meter entsprechen, alle 10 Meter ein Penaltycheck
 
-Für vorgehensweise siehe "Definitions"
+Für die Vorgehensweise siehe "Definitions"
 
 Feature List
 
