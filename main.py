@@ -19,6 +19,7 @@ def main():
         [y1,y2,y3,y4]
     ]
     #polist range on first iteration is from [0][0] and [1][3]
+    #first index 0 = x 1 = y
     #create request as class (not sure why)
     request = Request(polist)
 
@@ -41,12 +42,22 @@ def main():
         if __name__ == '__main__':
             spawner(polist)#spawns points between every x and y point in array at half way but not betwen first and second, and penult and ult
         #returns polistnew 
-        polist = polistnew
+        polistnew
         #returns newpoints (all points spawned this iteration)
 
-        for(){#amount of newpoint ( len(newpoints)
+        for(i){#amount of newpoint ( len(newpoints)
+            
+            #moves one point
             from algorithm import pointmover
             if __name__ == '__main__':
-                pointmover(#newpoint x and y)
+                pointmover(polistnew[0][i],polistnew[1][i]) #function pointmover calls anglcalc and aglescript seperatly within the algorithm.py file
+                #returns newx, newy (x and y of best newpoint)
+                polistnew[0][i] = newx
+                polistnew[1][i] = newy
+        }
+
+        #end of iteration finalize changes into polist
+        polist = polistnew
+    }
 
 
