@@ -6,14 +6,14 @@ class Request:
   
 def main():  
     #Create pointlist (polist) using user imput
-    x1 = input("x 1:")
-    x2 = input("x 2:")
-    x3 = input("x 3:")
-    x4 = input("x 4:")
-    y1 = input("y 1:")
-    y2 = input("y 2:")
-    y3 = input("y 3:")
-    y4 = input("y 4:")
+    x1 = input("x 1:")#start of vec1 x
+    x2 = input("x 2:")#end of vec1 x 
+    x3 = input("x 3:")#end of vec2 x
+    x4 = input("x 4:")#start of vec2 x
+    y1 = input("y 1:")#start of vec1 y
+    y2 = input("y 2:")#end of vec 1 y 
+    y3 = input("y 3:")#end of vec 2 y
+    y4 = input("y 4:")#start of vec 2 y
     polist = [
         [x1,x2,x3,x4],
         [y1,y2,y3,y4]
@@ -24,6 +24,11 @@ def main():
     request = Request(polist)
 
     for(){# amount of iterations (line versions)
+        
+        #plot polist
+        from plotter import polistplot
+        if __name__ == '__main__':
+            polistplost(polist)
         
         #calculate angles
         from angle_calc import anglcalc
@@ -42,7 +47,6 @@ def main():
         if __name__ == '__main__':
             spawner(polist)#spawns points between every x and y point in array at half way but not betwen first and second, and penult and ult
         #returns polistnew 
-        polistnew
         #returns newpoints (all points spawned this iteration)
 
         for(i){#amount of newpoint ( len(newpoints)
