@@ -1,9 +1,9 @@
-angle.calc
-  -input
-  -output
+angle_calc (unfinished)
+  -input 
+  -output angle_calc 
 
-angle.punishment (unfinished)
-  -input angle.calc
-  -output angle.punishment (deviation)
+angle_punishment (unfinished)
+  -input angle_calc
+  -output angle_punishment (deviation)
 
 
