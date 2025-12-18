@@ -7,5 +7,9 @@ Feature List
 
 Base:
 Splitting Algorithmus
-
+Penalty Calc (Angles)
 Extra:
+Obstacles
+Penalty Calc (Obstacles)
+Extra Extra:
+OSM Objects
