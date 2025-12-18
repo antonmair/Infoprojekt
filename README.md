@@ -6,18 +6,17 @@ Einheiten sollten Meter endsprechen, alle 10 Meter ein Penaltycheck
 
 Für vorgehensweise siehe "Definitions"
 
-
 Feature List
 
-Base:
+-Base:
 Splitting Algorithmus
 Penalty Calc (Angles)
 
-Extra:
+-Extra:
 Obstacles
 Penalty Calc (Obstacles)
 
-Extra Extra:
+-Extra Extra:
 OSM Objects
 
 Überlegungen Algorithmus
