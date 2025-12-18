@@ -9,11 +9,16 @@ class Request:
 
   
 def main():  
-    p1 = input("Point 1:")
-    p2 = input("Point 2:")
-    p3 = input("Point 3:")
-    p4 = input("Point 4:")
-    polist = [p1,p2,p3,p4]
+    x1 = input("x 1:")
+    x2 = input("x 2:")
+    x3 = input("x 3:")
+    x4 = input("x 4:")
+    y1 = input("y 1:")
+    y2 = input("y 2:")
+    y3 = input("y 3:")
+    y4 = input("y 4:")
+    polist = [x1,x2,x3,x4],
+    [y1,y2,y3,y4]
     from angle import anglescript
     if __name__ == '__main__':
         anglescript()
