@@ -23,7 +23,7 @@ def main():
     #create request as class (not sure why)
     request = Request(polist)
 
-    for(){# amount of iterations (line versions)
+    for i in range(5):# amount of iterations (line versions)
         
         #plot polist
         from plotter import polistplot
@@ -49,7 +49,7 @@ def main():
         #returns polistnew 
         #returns newpoints (all points spawned this iteration)
 
-        for(i){#amount of newpoint ( len(newpoints)
+        for j in range(len(newpoints)):#amount of newpoint ( len(newpoints)
             
             #moves one point
             from algorithm import pointmover
