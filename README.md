@@ -15,3 +15,6 @@ Penalty Calc (Obstacles)
 
 Extra Extra:
 OSM Objects
+
+Überlegungen Algorithmus
+Check nur in die richtung in die Vektoren Zeigen (siehe GGB)
