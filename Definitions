@@ -1,5 +1,5 @@
-Angle (unfinished)
-  -input angle
-  -output punishment
+angle (unfinished)
+  -input angle ()
+  -output punishment (deviation)
 
 
