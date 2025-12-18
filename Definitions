@@ -1,5 +1,9 @@
-angle (unfinished)
-  -input angle ()
-  -output punishment (deviation)
+angle.calc
+  -input
+  -output
+
+angle.punishment (unfinished)
+  -input angle.calc
+  -output angle.punishment (deviation)
 
 
