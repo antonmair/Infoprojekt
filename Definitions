@@ -1,4 +1,4 @@
-point_positions_angles
+point_positions_angles (unfinished)
   -input point_positions_list (list of all current points) 
   -point_positions_angles (given list is split into pairs of nearest three points)
 
