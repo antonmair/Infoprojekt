@@ -1,6 +1,6 @@
 point_positions_angles (unfinished)
   -input point_positions_list (list of all current points) 
-  -point_angles_list (given list is split into list of each point with its two nearest points)
+  -point_angles_list (given list is split into list of each point with its two nearest points) [Except the starting point of the starting vectors!]
 
 angle_calc (unfinished)
   -input point_positions_angles
