@@ -1,16 +1,21 @@
-point_positions_list_
-  input 
+user_input
+-input userinput_vector_points 
+ input iteration_step
+ input iteration_cycles
+-output 
 
-point_angles_list (unfinished)
-  -input point_positions_list (list of all current points) 
-  -point_angles_list (given list is split into a list of each point with its two nearest points) [Except the starting point of the starting vectors!]
+    point_positions_list
+      -input userinput_vector_points & iterated_points
+      -output point_positions_list (list of all current positions)
 
-angle_calc_list (unfinished)
-  -input point_angles_list
-  -output angle_calc_list (calculate which angles have what values)
+    point_angles_list (unfinished)
+      -input point_positions_list 
+      -point_angles_list (given list is split into a list of each point with its two nearest points) [Except the starting point of the starting vectors!]
 
-angle_punishment (unfinished)
-  -input angle_calc_list
-  -output angle_punishment (positive decimal number indicating deviation of set path)
+    angle_calc_list (unfinished)
+      -input point_angles_list
+      -output angle_calc_list (calculate which angles have what values)
 
-
+    angle_punishment (unfinished)
+      -input angle_calc_list
+      -output angle_punishment (positive decimal number indicating deviation of set path)
