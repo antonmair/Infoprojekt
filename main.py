@@ -5,7 +5,7 @@ class Request:
 
   
 def main():  
-    request = Request(polist)
+    #Create pointlist (polist) using user imput
     x1 = input("x 1:")
     x2 = input("x 2:")
     x3 = input("x 3:")
@@ -14,11 +14,18 @@ def main():
     y2 = input("y 2:")
     y3 = input("y 3:")
     y4 = input("y 4:")
-    polist = [x1,x2,x3,x4],
-    [y1,y2,y3,y4]
+    polist = [
+        [x1,x2,x3,x4],
+        [y1,y2,y3,y4]
+    ]
+    #polist range on first iteration is from [0][0] and [1][3]
+    request = Request(polist)
+    #calculate angles
     from angle_calc import anglcalc
     if __name__ == '__main__':
         anglcalc()
+        
+    #calculate punishment
     from angle_punishment import anglescript
     if __name__ == '__main__':
         anglescript()
