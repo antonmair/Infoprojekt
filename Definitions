@@ -27,3 +27,6 @@ user_input
       -output angle_punishment (positive decimal number indicating deviation of set path)
 ...
 }
+
+
+check main.py for logic and function names
