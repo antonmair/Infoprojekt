@@ -4,11 +4,11 @@ user_input
  {input iteration_step (how many iterated points the program starts at)}
 
 -output{ 
-  repeat iteration_cycles amount of times
+  repeat following iteration_cycles amount of times
 
     iterated_points
-      -iteration_current_cycle + {input iteration_step} 
-      -output iterated_points 
+      -iteration_current_cycles {+input iteration_step} 
+      -output iterated_points (added points between the two staring points)
 
     point_positions_list
       -input userinput_vector_points + iterated_points
