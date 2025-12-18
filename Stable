@@ -1,9 +1,11 @@
 Stable releases:
+-Angle
+  -Angle0.1 unstable
+    -input angle
+    -output punishment
 
--Angle0.1 unstable
-  -get angle
-  -give punishment
+  -Angle0.2 unstable
+    -inputinput angle
+    -output punishment
 
--Angle0.2 unstable
-  -
-  -
+-
