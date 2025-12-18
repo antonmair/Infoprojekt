@@ -1,6 +1,10 @@
+point_positions_angles
+  -input point_positions_list (list of all current points) 
+  -point_positions_angles (given list is split into pairs of nearest three points)
+
 angle_calc (unfinished)
-  -input userinput.vector1to2 & userinput.vector3to4 & 
-  -output angle_calc (calculate how many angles have what values)
+  -input point_positions_angles
+  -output angle_calc (calculate which angles have what values)
 
 angle_punishment (unfinished)
   -input angle_calc
