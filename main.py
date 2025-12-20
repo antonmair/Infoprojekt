@@ -6,14 +6,25 @@ class Request:
   
 def main():  
     #Create pointlist (polist) using user imput
-    x1 = input("x 1:")#start of vec1 x
-    x2 = input("x 2:")#end of vec1 x 
-    x3 = input("x 3:")#end of vec2 x
-    x4 = input("x 4:")#start of vec2 x
-    y1 = input("y 1:")#start of vec1 y
-    y2 = input("y 2:")#end of vec 1 y 
-    y3 = input("y 3:")#end of vec 2 y
-    y4 = input("y 4:")#start of vec 2 y
+    #x1 = input("x 1:")#start of vec1 x
+    #x2 = input("x 2:")#end of vec1 x 
+    #x3 = input("x 3:")#end of vec2 x
+    #x4 = input("x 4:")#start of vec2 x
+    #y1 = input("y 1:")#start of vec1 y
+    #y2 = input("y 2:")#end of vec 1 y 
+    #y3 = input("y 3:")#end of vec 2 y
+    #y4 = input("y 4:")#start of vec 2 y
+
+    #dev version
+    x1=1
+    x2=2
+    x3=3
+    x4=4
+    y1=5
+    y2=6
+    y3=7
+    y4=8
+    
     polist = [
         [x1,x2,x3,x4],
         [y1,y2,y3,y4]
