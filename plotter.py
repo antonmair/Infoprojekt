@@ -7,11 +7,12 @@ def polistplot(polist):
     endy1 = int(polist[1][1])
     starty1 = int(polist[1][0])
 
-    #vector 2
-    endx2 = int(polist[0][len(polist)])
-    startx2 =  int(polist[0][len(polist)+1])
-    endy2 = int(polist[1][len(polist)])
-    starty2 = int(polist[1][len(polist)+1])    
+    #vector 2 -1 = last element -2 = second to last
+    endx2 = int(polist[0][-2])
+    startx2 =  int(polist[0][-1])
+    endy2 = int(polist[1][-2])
+    starty2 = int(polist[1][-1])    
+
 
     #steigung v1
     deltax1 = endx1 - startx1
