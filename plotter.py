@@ -25,9 +25,14 @@ def polistplot(polist):
     plt.arrow(startx2, starty2, deltax2, deltay2, width=0.05)
 
     plt.plot(polist[0],polist[1])
-    plt.show()
+
+    #dumb show
+    #plt.show()
 
     #final dynamic show version
-    # plt.ioff()
-    # plt.gcf().show()
-    #plt.pause(5)
+    plt.ioff()
+    plt.gcf().show()
+
+    #variable plot show time
+    plt.pause(1)
+    
