@@ -8,8 +8,6 @@ def spawner(polist):
             polist[0].insert(i+1,((polist[0][i]+polist[0][i+1])/2))
             polist[1].insert(i+1,((polist[1][i]+polist[1][i+1])/2))
             i=i+1
-            #polistnew = polist
-        print(polist)
         i=i+1
-            
+    print(polist)
     return polist
