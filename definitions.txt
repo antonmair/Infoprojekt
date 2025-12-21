@@ -30,3 +30,16 @@ user_input
 
 
 check main.py for logic and function names
+functions status:
+algorithm.py
+ not started
+angle_calc.py
+ not started
+angle_punishment.py
+ not started
+main.py
+ defined logic
+plotter.py
+ finished
+pointinserter.py
+ finished
