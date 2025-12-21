@@ -76,7 +76,7 @@ def main():
 
         # #end of iteration finalize changes into polist
         polist = polistnew
-        print("printdoch")
-        print(polist)
+        #print("printdoch")
+        #print(polist)
 
 main()
