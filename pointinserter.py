@@ -4,7 +4,7 @@ def spawner(polist):
     while i < rangesetter:
     #for i in range(rangesetter): bei vor kann man iterator nicht modifizieren weil python dumm ist
         print(polist[0][i])
-        if polist[0][i]!=polist[0][0] and polist[0][i]!=polist[0][len(polist[0])-1] and polist[0][i]!=polist[0][len(polist[0])-2]:
+        if polist[0][i]!=polist[0][0] and polist[0][i]!=polist[0][-1] and polist[0][i]!=polist[0][-2]:#doesnt fully work for last part for some reason
             polist[0].insert(i+1,((polist[0][i]+polist[0][i+1])/2))
             polist[1].insert(i+1,((polist[1][i]+polist[1][i+1])/2))
             i=i+1
