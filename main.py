@@ -18,12 +18,12 @@ def main():
     #dev version
     x1=1
     x2=2
-    x3=3
-    x4=4
+    x3=20
+    x4=21
     y1=5
     y2=6
-    y3=7
-    y4=8
+    y3=21
+    y4=22
     polist = [
         [x1,x2,x3,x4],
         [y1,y2,y3,y4]
@@ -33,7 +33,7 @@ def main():
     #create request as class (not sure why)
     request = Request(polist)
 
-    for i in range(1):# amount of iterations (line versions)
+    for i in range(10):# amount of iterations (line versions) sollte nicht ueber 10 sein weil to much
         
         #plot polist
         from plotter import polistplot
