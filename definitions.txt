@@ -43,3 +43,18 @@ plotter.py
  finished
 pointinserter.py
  finished
+
+
+
+entire main and logic in pseudocode
+def main
+ imput of xy1-4 into polist[xy][1-4]
+ for i in range (amount of lineversions)
+  #non vital functions (in this segment used only for visualizationion)
+  from plotter import polistplot
+  polistplot()
+  from angle_calc import anglecalc
+  anglecalc()
+  from angle_punishment import anglescript
+  anglescript()
+
