@@ -50,6 +50,7 @@ entire main and logic in pseudocode
 def main
  imput of xy1-4 into polist[xy][1-4]
  for i in range (amount of lineversions)
+
   #non vital functions (in this segment used only for visualizationion)
   from plotter import polistplot
   polistplot()
@@ -57,4 +58,28 @@ def main
   anglecalc()
   from angle_punishment import anglescript
   anglescript()
+
+  #vital function (pointspawner and mover)
+  from algorithm import heavy
+  heavy()
+
+
+
+
+heavy() logic (pointspawner and algorithm combined)
+while (within list index)
+ spawn single point according to pointspawner logic
+ if point spawed
+  i=i+1
+ i=i+1
+ #move the newly created point accoarding to the angle optimisation (in relation to points i+1 and i-1) according to anglecalc() and anglescript()
+ define delta x/y from point i-1 to i+1
+ while(search area < dist i+1/i-1)
+  invert delta x to serch from i to search first direction
+  run anglecalc() and anglescript() for rating
+ while(search area < dist i+1/i-1)
+  invert delta y to serch from i to search second direction
+  run anglecalc() and anglescript() for rating
+ set best rated as new point within polist
+ 
 
