@@ -6,24 +6,14 @@ class Request:
 
 def main():  
     #Create pointlist (polist) using user imput
-    # x1 = input("x 1:")#start of vec1 x
-    # x2 = input("x 2:")#end of vec1 x 
-    # x3 = input("x 3:")#end of vec2 x
-    # x4 = input("x 4:")#start of vec2 x
-    # y1 = input("y 1:")#start of vec1 y
-    # y2 = input("y 2:")#end of vec 1 y 
-    # y3 = input("y 3:")#end of vec 2 y
-    # y4 = input("y 4:")#start of vec 2 y
-    
-    #dev version
-    x1=1
-    x2=2
-    x3=20
-    x4=21
-    y1=5
-    y2=6
-    y3=21
-    y4=22
+    x1 = input("x 1:")#start of vec1 x
+    x2 = input("x 2:")#end of vec1 x 
+    x3 = input("x 3:")#end of vec2 x
+    x4 = input("x 4:")#start of vec2 x
+    y1 = input("y 1:")#start of vec1 y
+    y2 = input("y 2:")#end of vec 1 y 
+    y3 = input("y 3:")#end of vec 2 y
+    y4 = input("y 4:")#start of vec 2 y
     polist = [
         [x1,x2,x3,x4],
         [y1,y2,y3,y4]
@@ -33,50 +23,17 @@ def main():
     #create request as class (not sure why)
     request = Request(polist)
 
-    for i in range(10):# amount of iterations (line versions) sollte nicht ueber 10 sein weil to much
+    for i in range(4):# amount of iterations (line versions) sollte nicht ueber 10 sein weil to much
         
+        #insert and move points
+        from pointinserter import spawner
+        if __name__ == '__main__':
+            polist = spawner(polist)
+        print(polist) #cosmetic
+
         #plot polist
         from plotter import polistplot
         if __name__ == '__main__':
             polistplot(polist)
-        # #calculate angles
-        # from angle_calc import anglcalc
-        # if __name__ == '__main__':
-        #     anglcalc(polist)#to check: does anglcalc need polist and why and when (is correct usage of anglcalc(polist)) same for the others
-        # #returns anglearr
-        
-        # #calculate punishment
-        # from angle_punishment import anglescript
-        # if __name__ == '__main__':
-        #     anglescript(anglearr)
-        # #returns penalty
-        
-        #insert points
-        from pointinserter import spawner
-        if __name__ == '__main__':
-            #spawner(polist)
-            polistnew = spawner(polist)
-            # from pointinserter import polistnew
-            # print(polistnew)
-
-            #spawns points between every x and y point in array at half way but not betwen first and second, and penult and ult
-        #returns polistnew 
-        #returns newpoints (all points spawned this iteration)
-
-        # for j in range(len(newpoints)):#amount of newpoint ( len(newpoints)
-            
-        #     #moves one point
-        #     from algorithm import pointmover
-        #     if __name__ == '__main__':
-        #         pointmover(polistnew[0][i],polistnew[1][i]) #function pointmover calls anglcalc and aglescript seperatly within the algorithm.py file
-        #         #returns newx, newy (x and y of best newpoint)
-        #         polistnew[0][i] = newx
-        #         polistnew[1][i] = newy
-        
-
-        # #end of iteration finalize changes into polist
-        polist = polistnew
-        #print("printdoch")
-        #print(polist)
 
 main()
