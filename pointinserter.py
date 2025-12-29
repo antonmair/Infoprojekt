@@ -8,7 +8,8 @@ def spawner(polist):
     #print(len(polist[0]))
     while i < rangesetter:
         #print("checking...")
-        if polist[0][i]!=polist[0][0] and polist[0][i]!=polist[0][-1] and polist[0][i]!=polist[0][-2]:#if you add polist[0][i]!=polist[0][1] nothing ever happens
+        if(i != 0 and i != rangesetter-1 and i != rangesetter):#this should work
+        #if polist[0][i]!=polist[0][0] and polist[0][i]!=polist[0][-1] and polist[0][i]!=polist[0][-2]:#this logic is flawed because it doesnt check for position within list but for values witch chan be the same fore diffrent positions
             #print("how often do you do this?")
             #print("this message should appear",rangesetter-2,"times")
             #----algorithm for pointmover----
