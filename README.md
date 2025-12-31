@@ -30,8 +30,7 @@ OSM Objects
 ---NOTES AND BUGS---
 
 idea: Check nur in die richtung in die Vektoren Zeigen (siehe GGB)
-bug: x1 and x2 cannot be the same and also most other imput x/y
-
+idea: use function to find localmin of the following angle function (a - x / 2)² + x² + (b - x / 2)² where a is the first static angle x is the second movable angle and b is the third static angle (would need scraping of entire original algorithm)
 
 ---FUNCTION STATUS---
 
@@ -40,7 +39,7 @@ main.py
 plotter.py
  finished
 pointinserter.py
- unstable version finished
+ finished
 angle_calc.py
  not started
 angle_punishment.py
