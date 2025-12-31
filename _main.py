@@ -1,6 +1,7 @@
-#solve Trassenfinder
+import matplotlib.pyplot as plt
+
 class Request:
-    def __init__(self, polist):##unfinished
+    def __init__(self, polist):
         self.polist = polist
 
 
@@ -17,17 +18,16 @@ def main():
     
     #dev version
 
-    #this example is a bit off
-    # x1=2
-    # x2=2.1
-    # x3=5
-    # x4=6
-    # y1=1
-    # y2=2
-    # y3=5
-    # y4=5
+    #they all work
+    x1=2
+    x2=2
+    x3=5
+    x4=6
+    y1=1
+    y2=2
+    y3=5
+    y4=5
 
-    #this example works perfectly, i think
     # x1=1
     # x2=2
     # x3=20
@@ -37,7 +37,6 @@ def main():
     # y3=21
     # y4=22
 
-    #this one doesnt work
     # x1=1
     # x2=2
     # x3=3
@@ -47,15 +46,15 @@ def main():
     # y3=7
     # y4=8
 
-    #example with multiple same works perfectly until i=4
-    x1=1
-    x2=2
-    x3=8
-    x4=9
-    y1=3
-    y2=3
-    y3=3
-    y4=3
+    # x1=1
+    # x2=2
+    # x3=8
+    # x4=9
+    # y1=3
+    # y2=3
+    # y3=3
+    # y4=3
+    
     polist = [
         [x1,x2,x3,x4],
         [y1,y2,y3,y4]
@@ -65,7 +64,7 @@ def main():
     #create request as class (not sure why)
     request = Request(polist)
 
-    for i in range(4):# amount of iterations (line versions) sollte nicht ueber 10 sein weil to much
+    for i in range(5):# amount of iterations (line versions) sollte nicht ueber 10 sein weil to much
         
         #insert and move points
         from pointinserter import spawner
@@ -79,3 +78,4 @@ def main():
             polistplot(polist)
 
 main()
+plt.pause(20000)#pause plot on final iteration
