@@ -27,6 +27,9 @@ Penalty Calc (Obstacles)
 -Extra Extra:
 OSM Objects
 
+---ALT VERSION---
+using math function currently not online and without loops, much faster but not as easily moddable und thus worse results but more potential
+
 ---NOTES AND BUGS---
 
 idea: Check nur in die richtung in die Vektoren Zeigen (siehe GGB)
@@ -41,10 +44,9 @@ plotter.py
 pointinserter.py
  finished
 angle_calc.py
- not started
+ finished
 angle_punishment.py
- not started
-
+ removed
 
 
 
