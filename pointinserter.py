@@ -4,8 +4,8 @@ import math as math
 def spawner(polist, itera):
     rangesetter = len(polist[0])-1 #rangsetter is amount of points and thus amount of iterations
     i=0
-    afu = False
-    nfu = False
+    #afu = False
+    #nfu = False
     while i < rangesetter:
         if(i != 0 and i != rangesetter-1 and i != rangesetter): #check if point has to be created (dont create point if in start vectors)
 
@@ -85,13 +85,13 @@ def spawner(polist, itera):
             if altformula == False:
                 finalx = (p2x+deltax-math.tan(usedang1*math.pi/180)*deltay)
                 finaly = (p2y+deltay+math.tan(usedang1*math.pi/180)*deltax)
-                nfu = True
+                #nfu = True
 
             #formula for going right of line
             if altformula == True:
                 finalx = (p2x+deltax+math.tan(usedang1*math.pi/180)*deltay)
                 finaly = (p2y+deltay-math.tan(usedang1*math.pi/180)*deltax)
-                afu = True
+                #afu = True
             #insert final point into polist
             polist[0].insert(i+1,(finalx))
             polist[1].insert(i+1,(finaly))
