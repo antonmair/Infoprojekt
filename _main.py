@@ -78,8 +78,8 @@ def main(x1,x2,x3,x4,y1,y2,y3,y4):
     #create request as class (not sure why)
     request = Request(polist)
     itera = 0
-    print("------------------------")
-    for i in range(12):# amount of iterations (line versions) sollte nicht ueber 10 sein weil to much
+    #print("------------------------")
+    for i in range(12):# amount of iterations (line versions)
         itera = itera + 1
 
         #insert and move points
