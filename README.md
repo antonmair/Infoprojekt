@@ -11,7 +11,7 @@ IMPORTANT: The line will be drawn from end of vector 1 (point2), towards start o
 
 ---CONCEPT---
 
-An algorithm that with four given points defining two vectors, finds the optimal right of way (calculating distance of 180° on all given points).
+An algorithm that with four given points defining two vectors, finds the optimal right of way (calculating offset to 180° on all given points, through twelve iterating points).
 
 
 ---FUNCTION STATUS---
