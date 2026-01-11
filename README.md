@@ -9,8 +9,6 @@ Run _main.py, input 4 points, the first point defines the start of vector 1 the 
 
 IMPORTANT: The line will be drawn from end of vector 1 (point2), towards start of vector 2 (point3), point 1 and 4 determine the direction that the curve will try to smooth towards.
 
-See main.py for program, start it and use the mouse cursor to set 4 points. the first two points mark the start and direction of the road, while the last two points mark the end and direction of the roadend.
-
 ---KONZEPT---
 
 Ein Algorithmus, der Anhand von zwei gegebenen Punkten, die jeweils in eine Richtung Zeigen, eine Trasse findet, die dynamisch Anhand der Faktoren Distanz, 
