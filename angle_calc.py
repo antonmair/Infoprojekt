@@ -24,4 +24,3 @@ def anglcalc(p1x,p1y,p2x,p2y,p4x,p4y,p5x,p5y):
     #quadrant problem thingy (no more)
     
     return ang1, ang3
-
