@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 def main():  
-
-    #define amount of iterations    
-    iternumber = 12
-
+    #default settings
+    iternumber = 12 
+    side = 3.0
+    wtol = 0.0
     #define plots
     fig, ax = plt.subplots()
 
@@ -11,7 +11,8 @@ def main():
     plotvariant = 0
     from plotter import polistplot
     if __name__ == '__main__':
-        polist = polistplot(0, plotvariant, 0, 0, fig, ax)    
+        polist, iternumber, side, wtol  = polistplot(0, plotvariant, 0, iternumber, fig, ax, side, wtol)    
+
 
     #go to iteration step plot variant
     plotvariant = 1
@@ -22,18 +23,18 @@ def main():
         #insert and move points
         from pointinserter import spawner
         if __name__ == '__main__':
-            polist = spawner(polist, i)
+            polist = spawner(polist, i, side, wtol)
 
         #show iteration steps
         if i < 6:
             from plotter import polistplot
             if __name__ == '__main__':
-                polistplot(polist, plotvariant, i, iternumber, fig, ax)  
+                polistplot(polist, plotvariant, i, iternumber, fig, ax, 0, 0)  
 
     #final display after curve is finished
     plotvariant = 2
     from plotter import polistplot
     if __name__ == '__main__':
-        polistplot(polist, plotvariant, 0, 0, fig, ax) 
+        polistplot(polist, plotvariant, 0, 0, fig, ax, 0, 0) 
 
 main()
