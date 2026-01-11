@@ -17,19 +17,19 @@ An algorithm that with four given points defining two vectors, finds the optimal
 ---FUNCTION STATUS---
 
 main.py
- finished
+ [finished]
 
 plotter.py
- finished
+ [finished]
  
 pointinserter.py
- finished
+ [finished]
  
 angle_calc.py
- finished
+ [finished]
  
 angle_punishment.py
- finished
+ [finished]
  
 
 ---POSSIBLE DEVELOPMENTS---
