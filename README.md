@@ -52,6 +52,6 @@ angle_punishment.py
 
 ---CREDITS---
 
- Anton Mair 
+ Anton Mair [Mat. Nr. 102964]
  
  Ava Ditkun [Mat. Nr. 102253]
