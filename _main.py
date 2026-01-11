@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 def main():  
 
     #define amount of iterations    
-    iternumber = 6
+    iternumber = 8
 
     #define plots
     fig, ax = plt.subplots()
