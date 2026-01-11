@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def polistplot(polist, plotvariant, i, iternumber, fig , ax):
+def polistplot(polist, plotvariant, i, iternumber, fig , ax, side, wtol):
     if plotvariant == 0:#initializer
+
         #define main pointlist
         polist = [[], []]
+        plt.subplots_adjust(right=0.6)
 
         #define plot settings
         ax.set_title("Click 4 Points")
@@ -13,8 +15,31 @@ def polistplot(polist, plotvariant, i, iternumber, fig , ax):
         ax.grid(True)
         plt.gca().set_aspect('equal')
 
-        #register clicks
+        #create sliders
+        from sliders import slidercreate
+        iterationsslider, sideslider, worseningslider = slidercreate(fig, ax, iternumber, side, wtol)  
+
+        #register sloder changes
+        slider_values = {'iternumber': iternumber, 'side': side, 'wtol': wtol}
+        
+        #check for slider input
+        def update_iterations(val):
+            slider_values['iternumber'] = int(val)
+        def update_side(val):
+            slider_values['side'] = int(val)
+        def update_wtol(val):
+            slider_values['wtol'] = val
+
+        #connect the changes to the sliders
+        iterationsslider.on_changed(update_iterations)
+        sideslider.on_changed(update_side)
+        worseningslider.on_changed(update_wtol)
+
+        #check for point input
         def onclick(event):
+            #ignore clicks outside axes or without data coordinates
+            if event.inaxes != ax or event.xdata is None or event.ydata is None:
+                return iternumber, side, wtol
             
             #insert points into polist
             polist[0].append(event.xdata)
@@ -30,10 +55,19 @@ def polistplot(polist, plotvariant, i, iternumber, fig , ax):
         while len(polist[0])<4:
             plt.pause(0.05)
 
+            #constantly read new slider inputs
+            iternumber = slider_values['iternumber']
+            side = slider_values['side']
+            wtol = slider_values['wtol']
+
         #disable user input    
         fig.canvas.mpl_disconnect(cid)
 
-        return polist
+        #recive potential slider changes
+        print(iternumber)
+        return polist, iternumber, side, wtol
+    
+    #-------------------------------------
     elif plotvariant == 1:#iteration steps
 
         #new title
@@ -66,9 +100,11 @@ def polistplot(polist, plotvariant, i, iternumber, fig , ax):
 
         return 0
     
+    #-------------------------------------
     elif plotvariant == 2:#final curve
+
         #clear previos plots
-        plt.cla()
+        ax.cla()
 
         #redefine plot settings
         ax.set_title("Final Curve")
