@@ -10,6 +10,7 @@ Run _main.py, input 4 points, the first point defines the start of vector 1 the 
 IMPORTANT: The line will be drawn from end of vector 1 (point2), towards start of vector 2 (point3), point 1 and 4 determine the direction that the curve will try to smooth towards.
 
 ---CONCEPT---
+
 An algorithm that with four given points defining two vectors, finds the optimal right of way (calculating distance of 180° on all given points).
 
 
