@@ -2,7 +2,7 @@ from angle_calc import anglcalc
 from angle_punishment import anglepunishment
 import math as math
 
-def spawner(polist, itera):
+def spawner(polist, itera, side, wtol):
     rangesetter = len(polist[0])-1
     i=0
     while i < rangesetter:
@@ -30,7 +30,7 @@ def spawner(polist, itera):
             #calculates two angles with given points
             ang1, ang3 = (anglcalc(p1x,p1y,p2x,p2y,p4x,p4y,p5x,p5y))
 
-            ang2 = anglepunishment(ang1,ang3,i,rangesetter, itera)
+            ang2 = anglepunishment(ang1,ang3,i,rangesetter, itera, side, wtol)
 
             #define oldang1 for formula
             oldang1 = ang1
@@ -52,7 +52,7 @@ def spawner(polist, itera):
             #if altformula == True:
             #    finalx = (p2x+deltax+math.tan(usedang1*math.pi/180)*deltay)
             #    finaly = (p2y+deltay-math.tan(usedang1*math.pi/180)*deltax)
-            
+
             #insert final point into polist
             polist[0].insert(i+1,(finalx))
             polist[1].insert(i+1,(finaly))
