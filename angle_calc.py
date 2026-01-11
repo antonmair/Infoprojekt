@@ -22,5 +22,13 @@ def anglcalc(p1x,p1y,p2x,p2y,p4x,p4y,p5x,p5y):
         ang3 = ang3 + 180
 
     #quadrant problem thingy (no more)
+    #if ang1 < 0 and ang3 < 0:
+    #     altformula = False
+    #if ang1 > 0 and ang3 < 0:
+    #     altformula = True
+    #if ang1 < 0 and ang3 > 0:
+    #    altformula = False
+    #if ang1 > 0 and ang3 > 0:
+    #    altformula = False
     
     return ang1, ang3
