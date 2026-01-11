@@ -14,9 +14,7 @@ IMPORTANT: The line will be drawn from end of vector 1 (point2), towards start o
 Ein Algorithmus, der Anhand von zwei gegebenen Punkten, die jeweils in eine Richtung Zeigen, eine möglichst kurvenoptimale Trasse Findet (mit verwendung von der Abweichung von 180 Grad an Punkt). 
 Erweiterung möglich wo Objekte aus OSM Objekten (z.B. Häuser) bestehen und so eine reale Trassenplanung möglich ist. 
 
-An algorithm that with four given points defining two vectors, finds optimal curves.
-
-Furthermore: possibly adding OSM Objects (e.g. Houses) 
+An algorithm that with four given points defining two vectors, finds the optimal right of way. Furthermore: possibly adding OSM Objects (e.g. Houses) for further planning ability, taking houses into consideration.
 
 ---FUNCTION STATUS---
 
