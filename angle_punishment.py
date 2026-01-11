@@ -14,8 +14,7 @@ def anglepunishment(ang1, ang3, i, rangesetter, itera, side, wtol):
 
         #special case for worsening angle to prevent overcorrect (usually makes final result worse thus not used)
         if itera >1 and wtol != 0:
-            print('wtol')
-
+                
             if (abs(ang1-ang2/2))*wtol>abs(ang1):
                 #ang2 = ang2- ((ang1-ang2/2)-ang1)
                 ang2= 0
