@@ -4,6 +4,8 @@ check main for input instructions
 
 check each function for input and return of each
 
+See main.py for program, start it and use the mouse cursor to set 4 points 
+
 ---KONZEPT---
 
 Ein Algorithmus, der Anhand von zwei gegebenen Punkten, die jeweils in eine Richtung Zeigen, eine Trasse findet, die dynamisch Anhand der Faktoren Distanz, 
