@@ -9,6 +9,8 @@ Run _main.py, input 4 points, the first point defines the start of vector 1 the 
 
 IMPORTANT: The line will be drawn from end of vector 1 (point2), towards start of vector 2 (point3), point 1 and 4 determine the direction that the curve will try to smooth towards.
 
+the files in the Folders are other version with some diffrent calculation methods for punishment and also the older loop version, these are used for debugging and optimizing of the formula
+
 ---CONCEPT---
 
 An algorithm that with four given points defining two vectors, finds the optimal right of way (calculating offset to 180° on all given points, iterating twelve times, each iteration adding a newly set point and recalculating the offset).
