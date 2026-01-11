@@ -9,6 +9,14 @@ Run _main.py, input 4 points, the first point defines the start of vector 1 the 
 
 IMPORTANT: The line will be drawn from end of vector 1 (point2), towards start of vector 2 (point3), point 1 and 4 determine the direction that the curve will try to smooth towards.
 
+The sliders can be changed and will change the way the line looks / is optimised
+
+The worsening prohibitator is diabled by default. This setting will create more straight lines within the path and prevents some overcorrect issues. This will howerer mean that curves are usually tighther
+
+The side multiplier defines how much more the side angles are punished. A high value makes the angles directly ajesant to the vectore smoother but will lead to some questionalbe pathfinding on some examples. A low value means side angles are not punished as severly which often leads to straighter, more direct paths at the cost of a smoth entry and exit
+
+The iterations slider defines the amount of iterations the code runs. This defines the amount of times new points are inserted inbetween every point of previos iterations. The iterations visualizer only visualizes up to 6 iterations because further changes are not as visible. The final line will however be the result of all the chosen iterations.
+
 The files in the Folders are other version with some diffrent calculation methods for punishment and also the older loop version, these are used for debugging and optimizing of the formula
 
 ---CONCEPT---
