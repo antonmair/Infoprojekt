@@ -63,8 +63,6 @@ def polistplot(polist, plotvariant, i, iternumber, fig , ax, side, wtol):
         #disable user input    
         fig.canvas.mpl_disconnect(cid)
 
-        #recive potential slider changes
-        print(iternumber)
         return polist, iternumber, side, wtol
     
     #-------------------------------------
