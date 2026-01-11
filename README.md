@@ -4,7 +4,7 @@ check main for input instructions
 
 check each function for input and return of each
 
-See main.py for program, start it and use the mouse cursor to set 4 points 
+See main.py for program, start it and use the mouse cursor to set 4 points. the first two points mark the start and direction of the road, while the last two points mark the end and direction of the roadend.
 
 ---KONZEPT---
 
