@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 def main():  
 
     #define amount of iterations    
-    iternumber = 8
+    iternumber = 12
 
     #define plots
     fig, ax = plt.subplots()
@@ -22,12 +22,13 @@ def main():
         #insert and move points
         from pointinserter import spawner
         if __name__ == '__main__':
-            polist = spawner(polist)
+            polist = spawner(polist, i)
 
         #show iteration steps
-        from plotter import polistplot
-        if __name__ == '__main__':
-            polistplot(polist, plotvariant, i, iternumber, fig, ax)  
+        if i < 6:
+            from plotter import polistplot
+            if __name__ == '__main__':
+                polistplot(polist, plotvariant, i, iternumber, fig, ax)  
 
     #final display after curve is finished
     plotvariant = 2
