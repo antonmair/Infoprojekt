@@ -1,7 +1,7 @@
 from spawnerhouse import spawnerh
 def curvecreatorh(polist, building_gdf):  
     #define amunt of iterations
-    iternumber = 1
+    iternumber = 3
     #main loop
     for k in range(int(iternumber)):
         #insert and move points
