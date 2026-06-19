@@ -1,11 +1,12 @@
 from spawnerhouse import spawnerh
-def curvecreatorh(polist, building_gdf):  
+
+def curvecreatorh(polist, building_gdf,angle_weight,first_value,second_value):  
     #define amunt of iterations
-    iternumber = 3
+    iternumber = 12 #iterations maybe based on line length
     #main loop
     for k in range(int(iternumber)):
         #insert and move points
-        polist = spawnerh(polist, k, building_gdf)
+        polist = spawnerh(polist, k, building_gdf,angle_weight,first_value,second_value)
     #print(polist)
     return polist
 
