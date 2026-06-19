@@ -1,14 +1,14 @@
 import osmnx as ox
 import geopandas as gpd
-from shapely.geometry import Point
 from geopy.distance import geodesic
 
-building_gdf = None
-building_sindex = None
+building_gdf_wgs84 = None
+building_gdf_local = None
+#building_sindex = None
 
 #downloads buildings around midpoint(point2, point3) and creates a GeoDataFrame and spatial index
-def building_cache(point2, point3):
-    global building_gdf, building_sindex
+def building_cache(point2, point3, target_crs):
+    global building_gdf_wgs84, building_gdf_local#, building_sindex
 
     #midpoint of line
     mid_lat = (point2[0] + point3[0]) / 2
@@ -16,35 +16,39 @@ def building_cache(point2, point3):
 
     #distance in meters
     dist = geodesic(point2, point3).meters
-
+    
     #circle (or square?) around midpoint
-    radius = dist * 1 #varible for range of downloaded housees (times 3 or 4 on serious)
+    radius = dist * 0.6#1 is safer but slower
 
     #download osm
     try:
-        building_gdf = ox.features_from_point(
+        building_gdf_wgs84 = ox.features_from_point(
             (mid_lat, mid_lon),
             tags={"building": True},
             dist=radius
         )
-    except Exception:#dont like this change...
-        building_gdf = gpd.GeoDataFrame(
+    except Exception:
+        building_gdf_wgs84 = gpd.GeoDataFrame(
             geometry=[],
             crs="EPSG:4326"
-        )   
-    #convert to centroid
-    building_gdf = building_gdf[
-        building_gdf.geometry.type.isin(
+        )
+
+    #convert to allowed geometry types
+    building_gdf_wgs84 = building_gdf_wgs84[
+        building_gdf_wgs84.geometry.type.isin(
             ["Point", "Polygon", "MultiPolygon"]
         )
-    ]
-    building_gdf["geometry"] = building_gdf.geometry.apply(
-        lambda g: g.centroid
-        if g.geom_type in ["Polygon", "MultiPolygon"]
-        else g
+    ].copy()
+
+    #convert polygons to centroids
+    building_gdf_wgs84["geometry"] = building_gdf_wgs84.geometry.apply(
+        lambda g: g.centroid if g.geom_type in ["Polygon", "MultiPolygon"] else g
     )
 
-    #create spatial index
-    building_sindex = building_gdf.sindex
+    #local projected version for calculations
+    building_gdf_local = building_gdf_wgs84.to_crs(target_crs)
 
-    #print(f"Cached {len(building_gdf)} buildings")
+    #create spatial index
+    #building_sindex = building_gdf_local.sindex
+
+    return mid_lat, mid_lon, radius
