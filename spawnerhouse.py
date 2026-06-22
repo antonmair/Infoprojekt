@@ -98,7 +98,10 @@ def spawnerh(polist, k, building_gdf,angle_weight,first_value,second_value):#k i
             #house part
             total = 0.0
             anglepart = 0.0
-            
+
+            #division by 0 safety
+            #if second_value == 2001:
+            #    second_value = second_value-1
             for dxn, dyn in house_coords:#final was 25000 200 and 2000000
                 dxd = dxn - basepoint.x
                 dyd = dyn - basepoint.y
@@ -106,14 +109,14 @@ def spawnerh(polist, k, building_gdf,angle_weight,first_value,second_value):#k i
                     (dxd - dxf * x) ** 2
                     + (dyd - dyf * x) ** 2
                 ) ** 0.5
-                total += first_value / d + d / second_value#base is 200 200 now i try 1000 500 # first value is more punishment for closer value second value is more punishment for to far away 50.000 an 100? 500 second value is way to much #100 sv might be too direct #sv as a slider is the s slider 2X SLIDER #to scared of houses
+                total += first_value / d + d / (2001-second_value)#base is 200 200 now i try 1000 500 # first value is more punishment for closer value second value is more punishment for to far away 50.000 an 100? 500 second value is way to much #100 sv might be too direct #sv as a slider is the s slider 2X SLIDER #to scared of houses
                 #print("thisnot", k)
                 #total=total/house_count#logic here is to always weight the same here regardless of amount of houses correction happens in the angle part #imf fuc this shit doesnt even work well
-            print("house pun", total)#change general punishment based on total amount of houses and distance
+            #print("house pun", total)#change general punishment based on total amount of houses and distance
             if house_count!=0:
-                anglepart += (angle*house_count/house_count)*angle_weight*k**2#this has to be dynamic as well#100 is entirely approximate might be a slider mynbe 200 SLIDER #why the fuck was it *house_count #had ten with *house_count times house count is done because more houses means more value in the top part which needs more value in the bottom part so it doues maek esense
+                anglepart += (angle)*angle_weight*k**2#this has to be dynamic as well#100 is entirely approximate might be a slider mynbe 200 SLIDER #why the fuck was it *house_count #had ten with *house_count times house count is done because more houses means more value in the top part which needs more value in the bottom part so it doues maek esense #times after (angle used to be *house_count/house_count) not using it anymore is because it just works better without and house_count is already accounted for in the total amount of for loops that are run and thus the amount of times the total is added to. any additional calculation with house_count doesnt improve performance
                 total+=anglepart
-                print("angle pun", anglepart)
+                #print("angle pun", anglepart)
             else:
                 total = angle
             #else:
