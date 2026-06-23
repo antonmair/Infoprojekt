@@ -33,7 +33,14 @@ Die Checkboxes erlauben es verschiedene optionale Elemente ein und aus zu schalt
   Iterationen zeigen: Wenn diese Option aktiviert ist, wird die Trasse (Haustrasse) bereits während dem Algorithmus dargestellt und die geographische endwicklung der Trasse ist über die Iterationen einsehbar, wenn diese Option deaktiviert wird, wird die Trasse erst im Nachinein angezeigt.
   Haltepunkte generieren: Haltepunkte werden generiert, kann etwas länger dauern
 
-  Direktheit: Umso höher der Direktheit Wert ist, desto weniger Verschwenkt ist die Trasse und, desto mehr ähnelt sie sich der blauen Winkelkurve, dieser Wert kann auch durch manuelle Eingabe über das Slider Limit gesetzt werden, wenn eine direktere Trasse erwünscht ist
+  Direktheit: Umso höher der Direktheit Wert ist, desto weniger verschwenkt ist die Trasse und, desto mehr ähnelt sie sich der blauen Winkelkurve, dieser Wert kann auch durch manuelle Eingabe über das Slider Limit gesetzt werden, wenn eine direktere Trasse erwünscht ist.
+  Hausscheue:
+  Erschließung:
+
+
+Hinweise und Trassenartenvorschläge:
+  Bei nähe zu Großstädten (wo diese auch größtenteils im Ladebereich sind) sollte
+  
   
   
 
