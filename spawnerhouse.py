@@ -1,5 +1,3 @@
-#latitude is russia-usa and x ai sais this is wrong fo r som e reason 
-#longitude is south africa-poland and y
 import math as math
 import geopandas as gpd
 from scipy.optimize import root_scalar
@@ -8,42 +6,43 @@ from angle_calc import anglcalc
 from scipy.optimize import minimize_scalar
 
 def spawnerh(polist, k, building_gdf,angle_weight,first_value,second_value):#k is iteration were on
-    #print("SPAWNERH CALLED with len(polist)=", len(polist))7
-    
+    #call anglcalc for anglist
     anglist = anglcalc(k, polist)
-    
+
+    #range and iteration logic based on old first semester project
     rangesetter = len(polist) - 2
     i = 1
     angleitera = 0
-
     while i < rangesetter:
+        #seperate current point coordinates
         p2x, p2y = polist[i]
-
+        
+        #seperate new midpoint coordinates
         p3x = (polist[i][0] + polist[i + 1][0]) / 2
         p3y = (polist[i][1] + polist[i + 1][1]) / 2
 
+        #calculate difference
         deltax = p3x - p2x
         deltay = p3y - p2y
         
-        #print("deltax/y", deltax, deltay)
         #lenght is radius around midpoint
         length = (deltax**2 + deltay**2)**0.5
+
         #housebounds = math.sqrt(length*1000) #retest this might work better
         housebounds = length
 
+        #calculate normale steigung
         dxf = -deltay / length
         dyf = deltax / length
-        
-        #print("dxf,dyf", dxf, dyf)
 
+        #combine p3 as point
         basepoint = Point(p3x, p3y)
 
-        nearby_buildings = building_gdf[#maybe visibly display bounds with polygon
-            building_gdf.geometry.distance(basepoint) <= housebounds#dynamic radius based on iteration is very very essential to implemnt #500 current base#2k is good
-        ]
-        #print("radius", housebounds)
-        #print("basepoint koordiantes", basepoint)
-        if k<7:
+        #generates house search area
+        if k<8:#limits to first iteration because houses no longer relevant for last few meters
+            nearby_buildings = building_gdf[
+                building_gdf.geometry.distance(basepoint) <= housebounds
+            ]
             house_coords = [
                 (point.x, point.y)
                 for point in nearby_buildings.geometry
