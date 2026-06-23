@@ -1,14 +1,14 @@
-from ipywidgets import FloatSlider, FloatText, Button, VBox, HBox, Output, HTML, Layout, dlink, Checkbox
+from ipywidgets import FloatSlider, FloatText, Button, VBox, HBox, Output, HTML, Layout, dlink, Checkbox,jslink
 def create_gui():
-    # konsistente Breite für die Regler
+    #layout def
     slider_layout = Layout(width='250px')
 
-    # --- Direktheit ---
+    #direktheit slider und text
     has_to_be_fast = FloatSlider(
         value=1000.0,#usedd to be 20
         min=1,
-        max=10000.0,
-        step=10.0,
+        max=2000.0,
+        step=1.0,
         description='Direktheit:',
         layout=slider_layout,
         readout=False
@@ -17,16 +17,16 @@ def create_gui():
         value=has_to_be_fast.value,
         layout=Layout(width='80px')
     )
-    # only slider -> text
+    #only slider -> text
     dlink((has_to_be_fast, 'value'), (has_to_be_fast_text, 'value'))
     has_to_be_fast_row = HBox([has_to_be_fast, has_to_be_fast_text])
 
-    # --- Hausscheue ---
+    #hausscheue slider und text
     big_nimby = FloatSlider(
-        value=1000.0,
+        value=5000.0,
         min=1,
         max=10000.0,
-        step=10.0,
+        step=1.0,
         description='Hausscheue:',
         layout=slider_layout,
         readout=False
@@ -35,12 +35,14 @@ def create_gui():
         value=big_nimby.value,
         layout=Layout(width='80px')
     )
+    
+    #only slider -> text 
     dlink((big_nimby, 'value'), (big_nimby_text, 'value'))
     big_nimby_row = HBox([big_nimby, big_nimby_text])
 
-    # --- Anbindungswichtigkeit ---
+    #anbindung slider und text
     big_yimby = FloatSlider(
-        value=1250.0,
+        value=1000.0,
         min=0.0,
         max=2000.0,
         step=10.0,
@@ -52,60 +54,67 @@ def create_gui():
         value=big_yimby.value,
         layout=Layout(width='80px')
     )
-    dlink((big_yimby, 'value'), (big_yimby_text, 'value'))
+    
+    #slider <-> text double coupled
+    jslink((big_yimby, 'value'), (big_yimby_text, 'value'))
     big_yimby_row = HBox([big_yimby, big_yimby_text])
 
+    #überschrift
     title = HTML("""
     <h3 style="margin:0; color:#2c3e50;">Trassenparameter</h3>
     <p style="margin:6px 0 2px 0; color:#6b7280;">
-        Clicke auf die Karte. 
+        Klicke auf die Karte. 
     </p>
     <p style="margin:6px 0 2px 0; color:#6b7280;">
         Nach 4 Clicks wird eine Trasse generiert
     </p>
     """)
 
-    #out = Output(
-    #    layout=Layout(
-    #        width='250px',
-    #        min_height='90px',
-    #        border='1px solid #d1d5db',
-    #        padding='8px'
-    #    )
-    #)
-
+    #reset
     reset_button = Button(
         description='Reset',
         button_style='warning',
         layout=Layout(width='140px')
     )
 
+    #initial status
     status = HTML("<b>Ready</b>")
 
     #toggle options for optional map and calculation elements
     show_circle = Checkbox(
-        value=True,
-        description='Show search circle',
+        value=False,
+        description='Hausradius zeigen',
         indent=False
     )
-
     show_blue_line = Checkbox(
+        value=False,
+        description='Winkelkurve zeigen',
+        indent=False
+    )
+    show_temp_line = Checkbox(
         value=True,
-        description='Show angular curve',
+        description='Iterationen zeigen',
+        indent=False
+    )
+    make_stations = Checkbox(
+        value=True,
+        description='Haltepunkte generieren',
         indent=False
     )
     
+    #define ui and layout
     ui = VBox(
         [
             title,
             has_to_be_fast_row,
             big_nimby_row,
             big_yimby_row,
+            reset_button,
             show_circle,
             show_blue_line,
-            reset_button,
-            status,
-            #out
+            show_temp_line,
+            make_stations,
+            status
         ],
         layout=Layout(
             width='360px',
@@ -116,6 +125,7 @@ def create_gui():
         )
     )
     
+    #return ui
     return{
         "has_to_be_fast": has_to_be_fast,
         "has_to_be_fast_text": has_to_be_fast_text,
@@ -126,7 +136,8 @@ def create_gui():
         "reset_button": reset_button,
         "show_circle": show_circle,
         "show_blue_line": show_blue_line,
-        #"out": out,
+        "show_temp_line": show_temp_line,
+        "make_stations": make_stations,
         "status": status,
         "ui": ui
     }
