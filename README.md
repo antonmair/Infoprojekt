@@ -22,7 +22,7 @@ jupyter lab
 
 
 In voila (ipnyb output als eigene Seite):
-cd "/Users/"path"/"projektordner"
+cd "/Users/"path"/Infoprojekt-main
 python -m voila jupiterpython.ipynb
 
 Verwendung des Programmes:
