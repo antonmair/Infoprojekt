@@ -14,7 +14,6 @@ In jupiternotebook:
 cd "/Users/"path"/"projektordner"
 python -m jupyterlab
 
-cd jupiterprojectcosetta
 python3 -m venv venv
 source venv/bin/activate
 
@@ -53,6 +52,12 @@ Die Checkboxes erlauben es verschiedene optionale Elemente ein und aus zu schalt
 
 Hinweise und Trassenartenvorschläge:
   Bei nähe zu Großstädten (wo diese auch größtenteils im Ladebereich sind) sollte der Erschließungsslider tendenziell stark runtergestuft werden, da der Algorithmus sonst zu Weit in Richtung Stadtmitte gezogen wird.
+
+  2000, 4600, 700 (Hochgeschwindigkeitsstrecke mit Feldbahnhöfen)
+  500, 10000,500 (eher langsamer Fernverkehr mit wenig Störung in Siedlungsbereichen, Güterbahntrasse)
+  860,5320,1400 (schneller Regionalverkehr mit am Ortsrand gelegenen Bahnhöfen)
+  50, 1000, 500 (langsamerer Regionalverkehr mit Lokalanschließung)
+  1, 500, 1900 (langsame Lokalbahn mit Starker anschließung (z.B. Stubaitalbahn)
   
   
   
