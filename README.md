@@ -19,7 +19,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 package Install
-pip install jupyterlab ipyleaflet numpy geopandas scipy osmnx geopy
+pip install jupyterlab ipyleaflet numpy geopandas scipy osmnx geopy voila
 jupyter lab
 
 
