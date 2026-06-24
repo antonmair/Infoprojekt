@@ -1,30 +1,27 @@
 Öffnung des Programmes:
 
+package Install
+pip install jupyterlab ipyleaflet numpy geopandas scipy osmnx geopy voila
+
+jupyter lab
 Windows:
 In jupiternotebook:
-cd "C:\Users\anton\Desktop\Curve\jupiterprojectcosetta"
+cd "C:\Users\"path"\Infoprojekt_main"
 python -m jupyterlab 
 
 In voila (ipnyb output als eigene Seite):
-cd "C:\Users\anton\Desktop\Curve\jupiterprojectcosetta"
+cd "C:\Users\"path"\Infoprojekt_main"
 python -m voila jupiterpython.ipynb
 
-Mac
+Mac (python oder python3)
 In jupiternotebook:
-cd "/Users/"path"/"projektordner"
+cd "/Users/"path"/Infoprojekt_main
 python -m jupyterlab
 
-python3 -m venv venv
-source venv/bin/activate
-
-package Install
-pip install jupyterlab ipyleaflet numpy geopandas scipy osmnx geopy voila
-jupyter lab
-
-
-In voila (ipnyb output als eigene Seite):
-cd "/Users/"path"/Infoprojekt-main
+In voila
+cd "/Users/"path"/Infoprojekt_main
 python -m voila jupiterpython.ipynb
+
 
 Verwendung des Programmes:
 Das Programm ist ein algorithmischer Trassenplanner. Für die Erstellung einer Klasse mussen 4 Klicks auf die Kartenoberfläche eingegeben werden. 
@@ -51,12 +48,23 @@ Die Checkboxes erlauben es verschiedene optionale Elemente ein und aus zu schalt
 
 
 Hinweise und Trassenartenvorschläge:
+
   Bei nähe zu Großstädten (wo diese auch größtenteils im Ladebereich sind) sollte der Erschließungsslider tendenziell stark runtergestuft werden, da der Algorithmus sonst zu Weit in Richtung Stadtmitte gezogen wird.
 
+  Für lokalere Bahnen muss der direktheisfaktor Tendenziell sehr niedrig sein (<50), außer die anderen Parameter sind auch sehr niedrig.
+
+  Der dritte Slider geht nicht aus den boundaries 0-2000 raus, da die logik 2001-n ist. Das führt auch dazu das bei Werte nahe 2000 die änderungen auch bei geringerer Verschiebung größer sind als anderswo.
+
+  Bahnarten:
+
   2000, 4600, 700 (Hochgeschwindigkeitsstrecke mit Feldbahnhöfen)
+  
   500, 10000,500 (eher langsamer Fernverkehr mit wenig Störung in Siedlungsbereichen, Güterbahntrasse)
+  
   860,5320,1400 (schneller Regionalverkehr mit am Ortsrand gelegenen Bahnhöfen)
+  
   50, 1000, 500 (langsamerer Regionalverkehr mit Lokalanschließung)
+  
   1, 500, 1900 (langsame Lokalbahn mit Starker anschließung (z.B. Stubaitalbahn)
   
   
