@@ -34,12 +34,12 @@ Die Checkboxes erlauben es verschiedene optionale Elemente ein und aus zu schalt
   Haltepunkte generieren: Haltepunkte werden generiert, kann etwas länger dauern
 
   Direktheit: Umso höher der Direktheit Wert ist, desto weniger verschwenkt ist die Trasse und, desto mehr ähnelt sie sich der blauen Winkelkurve, dieser Wert kann auch durch manuelle Eingabe über das Slider Limit gesetzt werden, wenn eine direktere Trasse erwünscht ist.
-  Hausscheue:
-  Erschließung:
+  Hausscheue: Umso höher dieser Wert ist, desto mehr entfernt sich die Trasse von Siedlungen, dieser Wert kann auch durch manuelle Eingabe über das Slider Limit gesetzt werden
+  Erschließung: Umso höher dieser Wert ist, desto mehr probiert das Programm Siedlungen Anzuschließen. Dieser Wert kann gegensätzlich zu Hausscheue funktionieren, hat aber im Algorithmus den Unterschied, dass wenn z.B. beide Slider hohe Werte haben, die Erschließung trotzdem eher versucht nahe gelegene (ca.500m) Siedlungen zu erschließen, es kann aber auch bei hohen Erschließungswerten durchaus vorkommen das durch Siedlungen Trassiert wird.
 
 
 Hinweise und Trassenartenvorschläge:
-  Bei nähe zu Großstädten (wo diese auch größtenteils im Ladebereich sind) sollte
+  Bei nähe zu Großstädten (wo diese auch größtenteils im Ladebereich sind) sollte der Erschließungsslider tendenziell stark runtergestuft werden, da der Algorithmus sonst zu Weit in Richtung Stadtmitte gezogen wird.
   
   
   
