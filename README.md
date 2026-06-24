@@ -14,7 +14,6 @@ In jupiternotebook:
 cd "/Users/"path"/"projektordner"
 python -m jupyterlab
 
-unzip Infoprojekt.zip
 cd jupiterprojectcosetta
 python3 -m venv venv
 source venv/bin/activate
@@ -37,12 +36,16 @@ Die Orte dieser 4 Punkte beschreiben wie folgt die Trasse:
 Parametrisierung:
 Die Checkboxes erlauben es verschiedene optionale Elemente ein und aus zu schalten, dazu gehören:
   Haussuchradius: Kreis der den Bereich des geladenen OSM Bereiches darstellt
+  
   Winkelkurve: Geometrische Winkelkurve, die auf der Kurve des Vorgängerprojektes aufbaut, die aber jetzt schneller und genauer ist
   Iterationen zeigen: Wenn diese Option aktiviert ist, wird die Trasse (Haustrasse) bereits während dem Algorithmus dargestellt und die geographische endwicklung der Trasse ist über die Iterationen einsehbar, wenn diese Option deaktiviert wird, wird die Trasse erst im Nachinein angezeigt.
+  
   Haltepunkte generieren: Haltepunkte werden generiert, kann etwas länger dauern
 
   Direktheit: Umso höher der Direktheit Wert ist, desto weniger verschwenkt ist die Trasse und, desto mehr ähnelt sie sich der blauen Winkelkurve, dieser Wert kann auch durch manuelle Eingabe über das Slider Limit gesetzt werden, wenn eine direktere Trasse erwünscht ist.
+  
   Hausscheue: Umso höher dieser Wert ist, desto mehr entfernt sich die Trasse von Siedlungen, dieser Wert kann auch durch manuelle Eingabe über das Slider Limit gesetzt werden
+  
   Erschließung: Umso höher dieser Wert ist, desto mehr probiert das Programm Siedlungen Anzuschließen. Dieser Wert kann gegensätzlich zu Hausscheue funktionieren, hat aber im Algorithmus den Unterschied, dass wenn z.B. beide Slider hohe Werte haben, die Erschließung trotzdem eher versucht nahe gelegene (ca.500m) Siedlungen zu erschließen, es kann aber auch bei hohen Erschließungswerten durchaus vorkommen das durch Siedlungen Trassiert wird.
 
 
