@@ -1,8 +1,8 @@
-from ipywidgets import FloatSlider, FloatText, Button, VBox, HBox, Output, HTML, Layout, dlink, Checkbox,jslink
+from ipywidgets import FloatSlider, BoundedFloatText, FloatText, Button, VBox, HBox, Output, HTML, Layout, dlink, Checkbox,jslink
 def create_gui():
     #layout def
     slider_layout = Layout(width='250px')
-
+    text_layout = Layout(width='80px')
     #direktheit slider und text
     has_to_be_fast = FloatSlider(
         value=1000.0,#usedd to be 20
@@ -15,7 +15,7 @@ def create_gui():
     )
     has_to_be_fast_text = FloatText(
         value=has_to_be_fast.value,
-        layout=Layout(width='80px')
+        layout=text_layout
     )
     #only slider -> text
     dlink((has_to_be_fast, 'value'), (has_to_be_fast_text, 'value'))
@@ -33,7 +33,7 @@ def create_gui():
     )
     big_nimby_text = FloatText(
         value=big_nimby.value,
-        layout=Layout(width='80px')
+        layout=text_layout
     )
     
     #only slider -> text 
@@ -46,13 +46,16 @@ def create_gui():
         min=0.0,
         max=2000.0,
         step=10.0,
-        description='Anbindungswichtigkeit:',
+        description='Erschließung:',
         layout=slider_layout,
         readout=False
     )
-    big_yimby_text = FloatText(
+    big_yimby_text = BoundedFloatText(
         value=big_yimby.value,
-        layout=Layout(width='80px')
+        min=big_yimby.min,
+        max=big_yimby.max,
+        step=big_yimby.step,
+        layout=text_layout
     )
     
     #slider <-> text double coupled
