@@ -14,6 +14,14 @@ In jupiternotebook:
 cd "/Users/"path"/"projektordner"
 python -m jupyterlab
 
+unzip Infoprojekt.zip
+cd jupiterprojectcosetta
+python3 -m venv venv
+source venv/bin/activate
+pip install jupyterlab ipyleaflet numpy geopandas scipy osmnx geopy
+jupyter lab
+
+
 In voila (ipnyb output als eigene Seite):
 cd "/Users/"path"/"projektordner"
 python -m voila jupiterpython.ipynb
