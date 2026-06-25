@@ -66,6 +66,8 @@ Hinweise und Trassenartenvorschläge:
   50, 1000, 500 (langsamerer Regionalverkehr mit Lokalanschließung)
   
   1, 500, 1900 (langsame Lokalbahn mit Starker anschließung (z.B. Stubaitalbahn)
+
+Die Speicherung von Hausdaten als cache greift auf den lokalen Speicherplatz zurück weshalb nach Verwendung die Hausdaten gespeichert bleiben und endsprechend auch viel Speicherplatz einnehmen können.
   
   
   
