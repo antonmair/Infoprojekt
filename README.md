@@ -42,6 +42,8 @@ Aktivierung in jupiternotebook:
 run jupiterpython.ipnyb
 
 
+Beim ersten launch, kann es dazu kommen, das sich das Programm beim Laden von Ipywidgets aufhängt, wenn es dazu kommt, soll man das Programm neu starten.
+
 
 Verwendung des Programmes:
 
