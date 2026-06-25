@@ -90,6 +90,8 @@ Hinweise und Trassenartenvorschläge:
 
   Der dritte Slider geht nicht aus den boundaries 0-2000 raus, da die logik 2001-n ist. Das führt auch dazu das bei Werte nahe 2000 die änderungen auch bei geringerer Verschiebung größer sind als anderswo.
 
+  Das Projekt ist auch prinzipiell nicht für urbane Trassen wie Straßenbahnen geeignet. Außer man Interpretiert es als U-Bahn
+
   Bahnarten:
 
   2000, 4600, 700 (Hochgeschwindigkeitsstrecke mit Feldbahnhöfen)
@@ -101,6 +103,8 @@ Hinweise und Trassenartenvorschläge:
   50, 1000, 500 (langsamerer Regionalverkehr mit Lokalanschließung)
   
   1, 500, 1900 (langsame Lokalbahn mit Starker anschließung (z.B. Stubaitalbahn)
+
+  50,0,2000 (U-Bahn)
 
 Die Speicherung von Hausdaten als cache greift auf den lokalen Speicherplatz zurück weshalb nach Verwendung die Hausdaten gespeichert bleiben und endsprechend auch viel Speicherplatz einnehmen können.
   
